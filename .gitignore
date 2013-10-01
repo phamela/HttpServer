@@ -1,1 +1,4 @@
 /SimpleServers/build/
+/httpServer/build/
+/httpServer/dist/
+/httpServer/nbproject/private/

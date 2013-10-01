@@ -6,7 +6,6 @@
  * To change this template, choose Tools | Template Manager
  * and open the template in the editor.
  */
-
 package simpleserversconcurrent;
 
 import java.io.*;
@@ -19,11 +18,13 @@ import javax.swing.JOptionPane;
  * @author Administrator
  */
 public class EchoClient {
-    
-    /** Creates a new instance of DayTimeClient */
+
+    /**
+     * Creates a new instance of DayTimeClient
+     */
     public EchoClient() {
     }
-    
+
     /**
      * @param args the command line arguments
      */
@@ -33,8 +34,8 @@ public class EchoClient {
 
             // nice output
             OutputStream os = socket.getOutputStream();
-            PrintWriter toServer = new PrintWriter(os);  
-            
+            PrintWriter toServer = new PrintWriter(os);
+
             // nice reading
             InputStream is = socket.getInputStream();
             Scanner fromServer = new Scanner(is);
@@ -46,12 +47,12 @@ public class EchoClient {
             toServer.flush();
 
             // echo from server
-            while (fromServer.hasNextLine()){
+            while (fromServer.hasNextLine()) {
                 System.out.println(fromServer.nextLine());
             }
 
             socket.close();
-        }catch(IOException ioe){
+        } catch (IOException ioe) {
             System.err.println("ERROR " + ioe.toString());
         }
 
