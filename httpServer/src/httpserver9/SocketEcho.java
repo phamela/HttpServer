@@ -28,12 +28,12 @@ public class SocketEcho implements Runnable {
                 BufferedReader inFromClient = new BufferedReader(
                         new InputStreamReader(connectionSocket.getInputStream()));
                 String request = inFromClient.readLine();
-                
+                System.out.println(request);
 //                String response = request. toUpperCase();
                 PrintStream toClient = new PrintStream(connectionSocket.getOutputStream());
                 toClient.print("HTTP/1.0 200 ok \r\n");
                 toClient.print("\r\n");
-                toClient.print("Hi Tobias we need you here !");
+                toClient.print("Hi Tobias we need you here ! WHERE");
             } finally {
                 connectionSocket.close();
             }
