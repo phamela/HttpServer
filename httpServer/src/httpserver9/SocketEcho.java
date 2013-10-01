@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 public class SocketEcho implements Runnable {
 
     private Socket connectionSocket;
-    private static final String ROOT_CATALOG = "C://Users//Phamela//Documents//GitHub";
+    private static final String ROOT_CATALOG = "C://Users//Phamela//Documents//GitHub//HttpServer"; //Declare your root catalog like it is very important that u used a back slash to locate the root folder of our project
     private static final Logger LOGGER = Logger.getLogger("TCPServer");
     public SocketEcho(Socket connection) {
         connectionSocket = connection;
@@ -78,7 +78,12 @@ public class SocketEcho implements Runnable {
 //        }
 //        
 //    }
-
+/**
+ * 
+ * If you want 
+ * @param output
+ * @throws IOException 
+ */
    private static void copy(final InputStream input, final OutputStream output) throws IOException {
         final byte[] buffer = new byte[1024];
         while (true) {
