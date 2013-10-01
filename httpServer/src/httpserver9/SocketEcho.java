@@ -23,11 +23,9 @@ import java.util.logging.Logger;
 public class SocketEcho implements Runnable {
 
     private Socket connectionSocket;
-<<<<<<< HEAD
-    private static final String ROOT_CATALOG = "C://Users//Tobias//Documents//GitHub";
-=======
+
     private static final String ROOT_CATALOG = "C://Users//Phamela//Documents//GitHub//HttpServer"; //Declare your root catalog like it is very important that u used a back slash to locate the root folder of our project
->>>>>>> 256067c7352c761b11b7e4854c3e177993d230c8
+
     private static final Logger LOGGER = Logger.getLogger("TCPServer");
     public SocketEcho(Socket connection) {
         connectionSocket = connection;
