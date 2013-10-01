@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 public class SocketEcho implements Runnable {
 
     private Socket connectionSocket;
-    private static final String ROOT_CATALOG = "C://Users//Phamela//Documents//GitHub";
+    private static final String ROOT_CATALOG = "C://Users//Tobias//Documents//GitHub";
     private static final Logger LOGGER = Logger.getLogger("TCPServer");
     public SocketEcho(Socket connection) {
         connectionSocket = connection;
