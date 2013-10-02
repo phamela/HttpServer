@@ -17,7 +17,7 @@ import java.util.concurrent.Executors;
 public class WebServer {
     public static final int SERVER_PORT = 9876;
 
-    public WebServer(int port) throws IOException {
+    public WebServer(int port) throws IOException{ 
         ExecutorService pool = Executors.newCachedThreadPool();
         ServerSocket s = new ServerSocket(port);
         while (true) {
@@ -25,6 +25,7 @@ public class WebServer {
             Runnable service = new WebServerhelper(clientConnection);
             pool.execute(service);
         }
+       
     }
 
     public static void main(String[] args) throws IOException {
