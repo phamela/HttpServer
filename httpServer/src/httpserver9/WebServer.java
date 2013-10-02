@@ -14,19 +14,20 @@ import java.util.concurrent.Executors;
  *
  * @author Phamela
  */
-public class TCPServer5 {
+public class WebServer {
+    public static final int SERVER_PORT = 9876;
 
-    public TCPServer5(int port) throws IOException {
+    public WebServer(int port) throws IOException {
         ExecutorService pool = Executors.newCachedThreadPool();
         ServerSocket s = new ServerSocket(port);
         while (true) {
             Socket clientConnection = s.accept();
-            Runnable service = new SocketEcho(clientConnection);
+            Runnable service = new WebServerhelper(clientConnection);
             pool.execute(service);
         }
     }
 
     public static void main(String[] args) throws IOException {
-        new TCPServer5(9876);
+        new WebServer(SERVER_PORT);
     }
 }
